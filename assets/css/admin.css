@@ -1,0 +1,344 @@
+/* BookNest - ระบบจัดการหลังบ้าน (Admin Styles - แบบเรียบง่าย เน้นการใช้งาน) */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Tahoma, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #212529;
+    min-height: 100vh;
+}
+
+/* แถบเมนูด้านบนของ Admin แบบเรียบง่าย */
+.admin-nav {
+    background-color: #343a40;
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin-nav-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.admin-nav .brand-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-right: 10px;
+}
+
+.admin-nav a {
+    color: #ced4da;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 4px 8px;
+}
+
+.admin-nav a:hover,
+.admin-nav a.active {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.admin-nav-user {
+    color: #adb5bd;
+    font-size: 13px;
+    margin-right: 12px;
+}
+
+.admin-nav-logout {
+    color: #ff6b6b !important;
+}
+
+/* กล่องเนื้อหาหลัก */
+.admin-container {
+    max-width: 1000px;
+    margin: 25px auto;
+    padding: 0 15px;
+}
+
+/* กล่องแจ้งเตือน Alert ธรรมดา */
+.alert-box {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.alert-success {
+    background: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+
+.alert-error {
+    background: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+
+/* กล่องการ์ดเนื้อหาแบบกรอบเส้นเรียบๆ */
+.card-panel {
+    background: #ffffff;
+    border: 1px solid #dee2e6;
+    padding: 18px;
+    margin-bottom: 20px;
+}
+
+/* หัวข้อและแถบจัดการ */
+.admin-page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.admin-filter-group {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+/* ปุ่มตัวกรองสถานะแบบเรียบง่าย */
+.filter-btn {
+    padding: 5px 10px;
+    font-size: 13px;
+    text-decoration: none;
+    border: 1px solid #ced4da;
+    background: #ffffff;
+    color: #495057;
+}
+
+.filter-btn:hover {
+    background: #e9ecef;
+}
+
+.filter-btn.active {
+    background: #007bff;
+    color: #ffffff;
+    border-color: #007bff;
+}
+
+/* ตารางแสดงข้อมูลแบบมีเส้นขอบชัดเจน (สไตล์ตารางเรียน/ตารางงาน) */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    background: #ffffff;
+}
+
+.admin-table th {
+    background-color: #e9ecef;
+    border: 1px solid #dee2e6;
+    text-align: left;
+    padding: 8px 10px;
+    color: #495057;
+}
+
+.admin-table td {
+    border: 1px solid #dee2e6;
+    padding: 8px 10px;
+    vertical-align: middle;
+}
+
+.admin-table tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* รูปหน้าปกหนังสือในตาราง */
+.table-book-img {
+    width: 32px;
+    height: 45px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+    display: block;
+}
+
+/* เลย์เอาต์ฟอร์มเพิ่มข้อมูล */
+.admin-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.book-form-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1.2fr 0.8fr 0.8fr;
+    gap: 8px;
+    align-items: flex-end;
+}
+
+.form-full-row {
+    grid-column: span 2;
+}
+
+.form-label-small {
+    display: block;
+    font-size: 12px;
+    color: #495057;
+    margin-bottom: 4px;
+}
+
+.form-input-admin {
+    width: 100%;
+    padding: 6px 8px;
+    border: 1px solid #ced4da;
+    font-size: 13px;
+}
+
+/* ปุ่มคำสั่งต่างๆ แบบปุ่มปกติ ไม่โค้งมน */
+.btn-admin-submit {
+    padding: 6px 12px;
+    background: #007bff;
+    color: white;
+    border: 1px solid #0069d9;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.btn-admin-success {
+    padding: 6px 12px;
+    background: #28a745;
+    color: white;
+    border: 1px solid #218838;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.btn-admin-danger {
+    padding: 6px 12px;
+    background: #dc3545;
+    color: white;
+    border: 1px solid #c82333;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.btn-table-edit {
+    padding: 3px 8px;
+    background: #007bff;
+    color: white;
+    border: 1px solid #0069d9;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.btn-table-del {
+    padding: 3px 8px;
+    background: #dc3545;
+    color: white;
+    border: 1px solid #bd2130;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.btn-table-toggle {
+    padding: 3px 8px;
+    font-size: 12px;
+    cursor: pointer;
+    border: 1px solid #ced4da;
+    background: #ffffff;
+}
+
+/* ป้ายสถานะแบบตัวหนังสือสีพื้น */
+.badge {
+    padding: 2px 6px;
+    font-size: 12px;
+    font-weight: normal;
+    border: 1px solid #ccc;
+    display: inline-block;
+}
+
+.badge-pending {
+    background: #fff3cd;
+    color: #856404;
+    border-color: #ffeeba;
+}
+
+.badge-paid {
+    background: #d4edda;
+    color: #155724;
+    border-color: #c3e6cb;
+}
+
+.badge-shipped {
+    background: #d1ecf1;
+    color: #0c5460;
+    border-color: #bee5eb;
+}
+
+.badge-rejected {
+    background: #f8d7da;
+    color: #721c24;
+    border-color: #f5c6cb;
+}
+
+.badge-customer {
+    background: #e2e3e5;
+    color: #383d41;
+}
+
+.badge-admin {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.badge-self {
+    font-size: 11px;
+    background: #cce5ff;
+    color: #004085;
+    padding: 1px 4px;
+}
+
+/* เลย์เอาต์คำสั่งซื้อ */
+.order-card-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+}
+
+.order-slip-panel {
+    background: #f8f9fa;
+    padding: 10px;
+    border: 1px solid #dee2e6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.slip-link-btn {
+    display: inline-block;
+    padding: 4px 8px;
+    background: #e9ecef;
+    color: #007bff;
+    border: 1px solid #ced4da;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.table-input-price {
+    width: 80px;
+    padding: 3px 5px;
+    border: 1px solid #ced4da;
+    font-size: 13px;
+}
+
+.table-input-stock {
+    width: 65px;
+    padding: 3px 5px;
+    border: 1px solid #ced4da;
+    font-size: 13px;
+}
+
+.stock-low-warning {
+    color: #dc3545 !important;
+    font-weight: bold;
+}

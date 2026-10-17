@@ -1,0 +1,371 @@
+/* ========================================================
+   BookNest - Storefront Styles (Mobile First - ระดับ Bonus)
+   ======================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Tahoma, sans-serif;
+}
+
+body {
+    background-color: #f4f6f8;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 15px auto;
+    padding: 0 15px;
+    flex: 1;
+}
+
+/* 1. Navbar */
+.navbar {
+    background-color: #0288d1;
+    padding: 12px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+.navbar .brand {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* 2. ปุ่มทั่วไป */
+.btn {
+    display: block;
+    width: 100%;
+    padding: 7px 0;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    margin-top: 5px;
+}
+
+.btn-primary {
+    background-color: #0288d1;
+    color: #ffffff;
+    border-color: #0277bd;
+}
+
+.btn-primary:hover {
+    background-color: #0277bd;
+}
+
+.btn-outline {
+    background-color: #ffffff;
+    border: 1px solid #0288d1;
+    color: #0288d1;
+}
+
+.btn-outline:hover {
+    background-color: #e1f5fe;
+}
+
+/* กล่องแจ้งเตือน */
+.alert-box {
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.alert-success {
+    background: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+
+.alert-error {
+    background: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+
+/* 3. แบนเนอร์โปรโมชัน */
+.promo-banner {
+    background-color: #0288d1;
+    color: white;
+    padding: 18px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.promo-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.promo-tag-item {
+    background: rgba(255, 255, 255, 0.25);
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+/* ========================================================
+   4. ระบบกริด Mobile First (เริ่มต้นจากจอมือถือ)
+   ======================================================== */
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* บนมือถือแสดง 2 เล่มต่อแถว */
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.book-card {
+    background: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.book-badge-bestseller {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background: #d32f2f;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 2px;
+    z-index: 1;
+}
+
+/* ปกหนังสือ: เห็นเต็มเล่ม สัดส่วนคงเดิม ไม่ล้นขอบ */
+.book-cover {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    background-color: #ffffff;
+    border: 1px solid #eee;
+    border-radius: 2px;
+}
+
+.book-price {
+    font-size: 14px;
+    font-weight: bold;
+    color: #0288d1;
+    margin: 6px 0;
+}
+
+/* ชุดเซ็ต 3 เล่ม */
+.bundle-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-top: 12px;
+}
+
+.bundle-card {
+    background: white;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* แบ่งหน้า */
+.pagination-bar {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 20px;
+}
+
+.page-btn {
+    padding: 5px 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    font-size: 12px;
+    background: white;
+    color: #333;
+}
+
+.page-btn.active {
+    background: #0288d1;
+    color: white;
+    border-color: #0288d1;
+}
+
+/* หน้ารายละเอียดสินค้า */
+.detail-card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 4px;
+    border: 1px solid #dcdcdc;
+    margin-top: 15px;
+}
+
+.detail-img-col {
+    text-align: center;
+}
+
+.detail-img-col img {
+    max-width: 180px;
+    width: 100%;
+    border: 1px solid #eee;
+}
+
+.detail-info-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* ตะกร้าสินค้า และฟอร์มชำระเงิน */
+.two-col-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.cart-table-panel, .summary-card {
+    background: #ffffff;
+    border-radius: 4px;
+    border: 1px solid #dcdcdc;
+    padding: 15px;
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cart-table th {
+    border-bottom: 2px solid #eee;
+    text-align: left;
+    color: #555;
+    font-size: 13px;
+    padding-bottom: 8px;
+}
+
+.cart-table td {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+/* กล่องฟอร์ม */
+.auth-box {
+    max-width: 400px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 4px;
+    border: 1px solid #dcdcdc;
+}
+
+.form-group {
+    margin-bottom: 12px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 4px;
+    color: #444;
+}
+
+.form-control {
+    width: 100%;
+    padding: 7px 9px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+.footer {
+    background-color: #333333;
+    color: #ccc;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 12px;
+    margin-top: auto;
+}
+
+/* ========================================================
+   5. ขยายขนาดสำหรับจอโน้ตบุ๊ก / คอมพิวเตอร์ (Desktop)
+   ======================================================== */
+@media (min-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 12px 24px;
+    }
+
+    /* บนจอคอมพิวเตอร์/โน้ตบุ๊ก แสดง 5 เล่มต่อแถว พอดี ไม่ใหญ่เกินไป */
+    .book-grid {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 15px;
+    }
+
+    .book-cover {
+        height: 200px;
+    }
+
+    .bundle-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .two-col-layout {
+        grid-template-columns: 2fr 1fr;
+        gap: 20px;
+    }
+
+    .detail-card {
+        flex-direction: row;
+        gap: 25px;
+        padding: 20px;
+    }
+
+    .detail-img-col {
+        flex: 0 0 220px;
+        text-align: left;
+    }
+}
