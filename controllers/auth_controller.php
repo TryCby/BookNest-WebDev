@@ -90,7 +90,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (empty($email) || empty($phone) || empty($new_password)) {
             $error = 'กรุณากรอกข้อมูลให้ครบถ้วน';
         } elseif ($new_password !== $confirm_new_password) {
-            $error = 'รหัสผ่านใหม่และการยืนยันไม่ตรงกัน';
+            $error = c;
         } else {
             $safe_email = mysqli_real_escape_string($conn, $email);
             $safe_phone = mysqli_real_escape_string($conn, $phone);
