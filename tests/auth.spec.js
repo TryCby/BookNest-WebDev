@@ -5,6 +5,14 @@ const CUSTOMER = {email: 'somchai@gmail.com', password: 'pass1234', name:'สม
 
 const submit = (page) => page.locator('form button[type="submit"], form input[type="submit"]').first()
 
+const CONFIG = {
+  customer: { email: 'somchai@gmail.com', password: 'pass1234' },
+  bookLink: process.env.BOOK_LINK || 'a[href*="book-detail.php?id="]',
+  searchInput: process.env.SEARCH_INPUT || 'input[name="q"], input[name="search"], input[name="keyword"], input[type="search"]',
+  categoryLink: process.env.CATEGORY_LINK || 'a[href*="category"]',
+  expectedBooks: 25,
+};
+
 
 async function login(page, email, password){
     await page.goto('/login.php')
